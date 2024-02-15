@@ -1,5 +1,8 @@
+import NextLink from 'next/link'
 import { Container, Box, Heading, useColorModeValue } from "@chakra-ui/react"
 import Image from 'next/image'
+import Section from '../components/section'
+import Paragraph from "../components/paragraph"
 
 const Page = () => {
     return (
@@ -46,6 +49,26 @@ const Page = () => {
                     </Box>
                 </Box>
             </Box>
+
+            <Section delay={0.1}>
+                <Heading as='h3' variant="section-title">
+                    Work
+                </Heading>
+                <Paragraph>
+                    hier to write something to introduce aboout self
+                    hier to write something to introduce aboout self
+                    hier to write something to introduce aboout self
+                    hier to write something to introduce aboout self
+                    hier to write something to introduce aboout self
+                    hier to write something to introduce aboout self
+                    {/* <Link as={NextLink} href="/works/inkdrop" passHref scroll={false}>
+                        Inkdrop
+                    </Link> */}
+                </Paragraph>
+            </Section>
+
+
+
         </Container>
         
     )
