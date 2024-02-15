@@ -4,13 +4,14 @@ import NavBar from '../navbar'
 import { Box, Container } from '@chakra-ui/react'
 // import Footer from '../footer'
 // import VoxelDogLoader from '../vocel-dog-loader'
+import ThreeDModelLoader from '../threeD-Model-loader'
 
 // * 3D- model
 
-// const LazyVocelDog = dynamic(() => import('../voxel-dog'), {
-//     ssr: false,
-//     loading: () => <VoxelDogLoader />
-// })
+const ThreeDModel = dynamic(() => import('../threeD-model'), {
+    ssr: false,
+    loading: () => <ThreeDModelLoader />
+})
 
 
 const Main = ({ children, router}) => {
@@ -38,7 +39,7 @@ const Main = ({ children, router}) => {
             <NavBar path={router.asPath} />
 
             <Container maxW="container.md" pt={14}>
-                {/* <LazyVoxelDog /> */}
+                <ThreeDModel />
 
                 {children}
 
